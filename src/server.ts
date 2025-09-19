@@ -51,3 +51,5 @@ app.listen(process.env.PORT, () => {
     console.log('------------------------------')
 
 })
+
+export default app
