@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                   // Versão do JS de saída
+    "module": "CommonJS",                 // Node.js usa CommonJS
+    "lib": ["ES2022"],                    // Recursos do JS que podemos usar
+    "outDir": "./dist",                    // Pasta de saída do build
+    "rootDir": "./src",                    // Pasta de código-fonte
+    "strict": true,                        // Habilita todas as checagens estritas
+    "esModuleInterop": true,               // Permite import/export compatível com CommonJS
+    "moduleResolution": "node",            // Resolve módulos estilo Node
+    "resolveJsonModule": true,             // Permite importar JSON
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "@controllers/*": ["src/controllers/*"],
+      "@models/*": ["src/models/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@shared/*": ["src/shared/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
