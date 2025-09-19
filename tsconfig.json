@@ -21,7 +21,8 @@
       "@models/*": ["src/models/*"],
       "@services/*": ["src/services/*"],
       "@utils/*": ["src/utils/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@database/*": ["src/database/*"]
     }
   },
   "include": ["src/**/*"],
