@@ -26,21 +26,22 @@ app.use(errors())
 
 //midlleware de erro
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    if (err instanceof AppError) {
-        res.status(err.status).json({
-            status: 'Error',
-            message: err.message,
-            code: err.status
-        })
-    }
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
+  if (err instanceof AppError) {
+    return res.status(err.status).json({
+      status: "Error",
+      message: err.message,
+      code: err.status,
+    });
+  }
 
-    res.status(500).json({
-        status: 'error',
-        message: 'Internal server error',
-        error: err.message
-    })
-})
+  return res.status(500).json({
+    status: "error",
+    message: "Internal server error",
+    error: err.message,
+  });
+});
+
 
 /* eslint-disable no-console */
 //iniciando servidor
